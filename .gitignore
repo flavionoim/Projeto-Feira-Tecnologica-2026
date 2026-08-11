@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Production Build Artifacts
+dist/
+build/
+out/
+.next/
+bin/
+obj/
+
+# TypeScript / JavaScript Compilation Logs & Cache
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.prettiercache
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# Debugging and Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing Coverage Outputs
+coverage/
+.nyc_output/
+
+# IDE / Text Editor Configurations
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Operating System Files
+.DS_Store
+Thumbs.db

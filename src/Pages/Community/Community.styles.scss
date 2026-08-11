@@ -1,0 +1,256 @@
+@import '../../styles/variables';
+
+.community-container {
+  background-color: $bg-main;
+  font-family: $font-main;
+  color: $text-body;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.community-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+
+  .community-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background-color: rgba(46, 125, 50, 0.1);
+      color: $primary;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: 800;
+      color: $text-title;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-muted;
+    }
+  }
+
+  .new-post-card {
+    background: $bg-card;
+    padding: 24px;
+    border-radius: $radius-md;
+    border: 1px solid $border-color;
+    box-shadow: $shadow-sm;
+    margin-bottom: 32px;
+
+    h3 {
+      font-size: 18px;
+      color: $text-title;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      input, textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid $border-color;
+        border-radius: $radius-sm;
+        font-family: $font-main;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s ease;
+
+        &:focus {
+          border-color: $primary;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 90px;
+      }
+
+      button {
+        align-self: flex-end;
+        background-color: $primary;
+        color: #fff;
+        border: none;
+        padding: 10px 24px;
+        border-radius: 99px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+          background-color: $primary-hover;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .post-card {
+      background: $bg-card;
+      padding: 24px;
+      border-radius: $radius-md;
+      border: 1px solid $border-color;
+      box-shadow: $shadow-sm;
+
+      .post-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+
+        .author-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .avatar {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(46, 125, 50, 0.15);
+            color: $primary;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+          }
+
+          .author-name {
+            font-weight: 700;
+            color: $text-title;
+            font-size: 15px;
+          }
+        }
+
+        .post-date {
+          font-size: 12px;
+          color: $text-muted;
+        }
+      }
+
+      .post-content {
+        font-size: 15px;
+        line-height: 1.6;
+        color: $text-body;
+        margin-bottom: 16px;
+      }
+
+      .post-actions {
+        display: flex;
+        gap: 16px;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 10px 0;
+        margin-bottom: 16px;
+
+        .btn-like {
+          background: none;
+          border: none;
+          color: $text-body;
+          font-family: $font-main;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+
+      .comments-section {
+        .comments-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: $text-title;
+          margin-bottom: 12px;
+        }
+
+        .comments-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 16px;
+
+          .comment-item {
+            background-color: $bg-main;
+            padding: 10px 14px;
+            border-radius: $radius-sm;
+            font-size: 13px;
+
+            .comment-author {
+              font-weight: 700;
+              color: $primary;
+              margin-right: 6px;
+            }
+
+            .comment-text {
+              color: $text-body;
+            }
+          }
+        }
+
+        .add-comment-form {
+          display: flex;
+          gap: 8px;
+
+          input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid $border-color;
+            border-radius: $radius-sm;
+            font-family: $font-main;
+            font-size: 13px;
+            outline: none;
+
+            &:focus {
+              border-color: $primary;
+            }
+          }
+
+          button {
+            background-color: $primary;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: $radius-sm;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $primary-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

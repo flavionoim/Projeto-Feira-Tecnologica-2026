@@ -1,0 +1,78 @@
+@import '../../styles/variables';
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 800;
+    color: $primary;
+    text-decoration: none;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid $border-color;
+    border-radius: 99px;
+    box-shadow: $shadow-sm;
+
+    .header-list {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+
+      li a {
+        color: $text-body;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .header-actions {
+    .btn-contact {
+      background-color: $primary;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 99px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: $primary-hover;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
