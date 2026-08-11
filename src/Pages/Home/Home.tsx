@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Home.styles.scss";
 import Header from "../../Components/Header/Header";
 import ReciclavelIcon from "../../assets/ReciclavelIcon.png";
