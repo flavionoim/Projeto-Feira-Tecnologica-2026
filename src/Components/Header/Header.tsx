@@ -14,7 +14,6 @@ export default function Header() {
       <nav className="header-nav">
         <ul className="header-list">
           <li><Link to="/">Início</Link></li>
-          <li><a href="/#acervo">Acervo</a></li>
           <li><Link to="/rotas">Rotas</Link></li>
           <li><Link to="/comunidade">Comunidade</Link></li>
           <li><a href="/#sobre">Sobre Nós</a></li>
